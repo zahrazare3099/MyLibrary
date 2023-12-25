@@ -1,15 +1,20 @@
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import useOutsideclick from "../Hooks/useOutsideclick";
 
 export default function Dropdown() {
   let [choose, setChoose] = useState(null);
   const [open, setOpen] = useState(false);
+  const openMore = useRef();
+  useOutsideclick(openMore, "exption", () => setOpen(false));
   return (
     <div className="relative flex flex-col p-2 w-4/5 border border-amber-800 rounded-lg bg-neutral-300">
       <div className="relative text-sm text-start pb-2 flex">
         You're selected : {choose || "---"}
       </div>
       <button
+        ref={openMore}
+        id="exption"
         className="flex justify-between w-20 p-1 m-0 rounded-lg  bg-blue-500 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white"
         onClick={() => setOpen((pre) => !pre)}
       >

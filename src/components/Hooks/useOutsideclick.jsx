@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 export default function useOutsideclick(ref, exeption, cb) {
   useEffect(() => {
-    function handleOutsideClick(event) {
+    function handleOutSideClick(event) {
       if (
         ref.current &&
         !ref.current.contains(event.target) &&
@@ -11,7 +11,7 @@ export default function useOutsideclick(ref, exeption, cb) {
         cb();
       }
     }
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("mousedown", handleOutSideClick);
+    () => document.removeEventListener("mousedown", handleOutSideClick);
   }, [ref, cb]);
 }
