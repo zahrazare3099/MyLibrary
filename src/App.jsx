@@ -11,7 +11,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="AppPage">
+    <div className="AppPage h-lvh">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HandleByReducer />} />
