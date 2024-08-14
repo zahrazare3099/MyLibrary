@@ -8,10 +8,11 @@ import HandleByReduxSync from "./components/reduxThunkSyncBox/HandleByReduxSync"
 import HandleByReduxAsync from "./components/reduxThunkAsyncBox/HandleByReduxAsync";
 import ShowTools from "./components/ShowTools";
 import "./App.css";
+import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   return (
-    <div className="AppPage h-lvh">
+    <div className="AppPage h-dvh">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HandleByReducer />} />
@@ -21,6 +22,7 @@ function App() {
           <Route path="redux-sync" element={<HandleByReduxSync />} />
           <Route path="redux-async" element={<HandleByReduxAsync />} />
           <Route path="Tools" element={<ShowTools />} />
+          <Route path="Pagination" element={<Pagination />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>

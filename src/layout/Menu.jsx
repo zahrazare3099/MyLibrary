@@ -16,6 +16,7 @@ export default function Menu() {
     { id: 4, name: "redux-sync", iconName: AcademicCapIcon },
     { id: 5, name: "redux-async", iconName: AcademicCapIcon },
     { id: 6, name: "Tools", iconName: WrenchIcon },
+    { id: 7, name: "Pagination", iconName: AcademicCapIcon },
   ];
   const IconCompont = ({ iconName, ...rest }) => {
     const Tag = iconName;
@@ -32,7 +33,6 @@ export default function Menu() {
            ? "w-44 transition-all ease-in-out delay-0 duration-1000"
            : " w-12 items-center transition-all ease-in-out delay-500 duration-700"
        }`}
-      // style={{ height: "91vh" }}
     >
       <div className="relativeLayer flex flex-col text-neutral-500 dark:text-slate-300">
         {/* menu icon */}
