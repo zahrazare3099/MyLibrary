@@ -9,11 +9,10 @@ import HandleByReduxAsync from "./components/reduxThunkAsyncBox/HandleByReduxAsy
 import ShowTools from "./components/ShowTools";
 import ShowClientPagination from "./components/Pagination/PaginationClintSide/ShowClientPagination";
 import ShowServerPagination from "./components/Pagination/PaginationServerSide/ShowServerPagination";
-import "./App.css";
 
 function App() {
   return (
-    <div className="AppPage h-dvh">
+    <div className="w-screen h-dvh">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HandleByReducer />} />
