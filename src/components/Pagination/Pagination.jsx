@@ -1,5 +1,5 @@
 import _ from "lodash";
-const ClientPagination = ({ pages, activePage, setPage }) => {
+const Pagination = ({ pages, activePage, setPage }) => {
   const prevPage = () => {
     setPage((oldpage) => {
       let prevPage = oldpage - 1;
@@ -61,4 +61,4 @@ const ClientPagination = ({ pages, activePage, setPage }) => {
   );
 };
 
-export default ClientPagination;
+export default Pagination;

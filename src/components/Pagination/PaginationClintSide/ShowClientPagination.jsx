@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
-import ClientPagination from "./ClientPagination";
+import Card from "../Card";
 import usePaginatedClientFetch from "../../Hooks/usePaginatedClientFetch";
+import Pagination from "../Pagination";
 
 const ShowClientPagination = () => {
   // fetch data
@@ -19,7 +19,7 @@ const ShowClientPagination = () => {
   }, [loading, page]);
 
   return (
-    <div className="h-fit flex flex-col items-center wrap gap-2 p-2 md:p-3 lg:p-5 w-full">
+    <div className="h-fit flex flex-col items-center wrap gap-2 py-5 px-2 md:px-3 lg:p-5 w-full">
       {loading && (
         <div className="w-full flex justify-center p-4">
           <svg
@@ -47,12 +47,7 @@ const ShowClientPagination = () => {
               <Card key={id} {...itemCardInfo} />
             ))}
           </div>
-
-          <ClientPagination
-            pages={data.length}
-            setPage={setPage}
-            activePage={page}
-          />
+          <Pagination pages={data.length} setPage={setPage} activePage={page} />
         </>
       )}
     </div>
