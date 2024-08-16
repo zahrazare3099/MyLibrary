@@ -16,7 +16,8 @@ export default function Menu() {
     { id: 4, name: "redux-sync", iconName: AcademicCapIcon },
     { id: 5, name: "redux-async", iconName: AcademicCapIcon },
     { id: 6, name: "Tools", iconName: WrenchIcon },
-    { id: 7, name: "Pagination", iconName: AcademicCapIcon },
+    { id: 7, name: "Pagination-client", iconName: AcademicCapIcon },
+    { id: 8, name: "Pagination-server", iconName: AcademicCapIcon },
   ];
   const IconCompont = ({ iconName, ...rest }) => {
     const Tag = iconName;

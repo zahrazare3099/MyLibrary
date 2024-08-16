@@ -7,8 +7,9 @@ import ReduxToolkit from "./components/redux-toolkitBox/ReduxToolkit";
 import HandleByReduxSync from "./components/reduxThunkSyncBox/HandleByReduxSync";
 import HandleByReduxAsync from "./components/reduxThunkAsyncBox/HandleByReduxAsync";
 import ShowTools from "./components/ShowTools";
+import ShowClientPagination from "./components/Pagination/PaginationClintSide/ShowClientPagination";
+import ShowServerPagination from "./components/Pagination/PaginationServerSide/ShowServerPagination";
 import "./App.css";
-import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="redux-sync" element={<HandleByReduxSync />} />
           <Route path="redux-async" element={<HandleByReduxAsync />} />
           <Route path="Tools" element={<ShowTools />} />
-          <Route path="Pagination" element={<Pagination />} />
+          <Route path="Pagination-client" element={<ShowClientPagination />} />
+          <Route path="Pagination-server" element={<ShowServerPagination />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
